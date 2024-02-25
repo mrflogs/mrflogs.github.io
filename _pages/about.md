@@ -28,4 +28,4 @@ My current research focuses on developing safe, robust, and efficient fine-tunin
 
 You can download my CV here.
 
-Email is the best way to reach me: <a href="mailto:zhengbo.wang@mail.ustc.edu.cn">zhengbo.wang@mail.ustc.edu.cn</a>. Feel free to send me a message!
+Email is the best way to reach me: <a href="mailto:zhengbowang@mail.ustc.edu.cn">zhengbowang@mail.ustc.edu.cn</a>. Feel free to send me a message!
