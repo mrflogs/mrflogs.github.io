@@ -48,6 +48,33 @@ Despite achieving promising results, most existing methods require labeled data 
   organization={IEEE},
 }
 
+@inproceedings{liang2023towards,
+  abbr={ICML Spotlight},
+  selected={true},
+  bibtext_show={true},
+  title={Realistic Unsupervised CLIP Fine-tuning with Universal Entropy Optimization},
+  author={Liang, Jian and Sheng, Lijun and Wang, Zhengbo and He, Ran and Tan, Tieniu},
+  abstract={The emergence of vision-language models (VLMs), such as CLIP, has spurred a significant research effort towards their application for downstream supervised learning tasks. Although some previous studies have explored the unsupervised fine-tuning of CLIP, they often rely on prior knowledge in the form of class names associated with ground truth labels. In this paper, we delve into a realistic unsupervised fine-tuning scenario by assuming that the unlabeled data might contain out-of-distribution samples from unknown classes. Furthermore, we emphasize the importance of simultaneously enhancing out-of-distribution detection capabilities alongside the recognition of instances associated with predefined class labels.
+To tackle this problem, we present a simple, efficient, and effective fine-tuning approach called Universal Entropy Optimization (UEO). UEO leverages sample-level confidence to approximately minimize the conditional entropy of confident instances and maximize the marginal entropy of less confident instances. Apart from optimizing the textual prompts, UEO also incorporates optimization of channel-wise affine transformations within the visual branch of CLIP. Through extensive experiments conducted across 15 domains and 4 different types of prior knowledge, we demonstrate that UEO surpasses baseline methods in terms of both generalization and out-of-distribution detection.},
+  html={https://arxiv.org/abs/2308.12919},
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024}
+}
+
+@inproceedings{wang2024connecting,
+  abbr={ICML},
+  selected={true},
+  bibtext_show={true},
+  title={Connecting the Dots: Collaborative Fine-tuning for Black-Box Vision-Language Models},
+  author={Wang, Zhengbo and Liang, Jian and He, Ran and Wang, Zilei and Tan, Tieniu},
+  abstract={With the emergence of pretrained vision-language models (VLMs), considerable efforts have been devoted to fine-tuning them for downstream tasks. Despite the progress made in designing efficient fine-tuning methods, such methods require access to the model's parameters, which can be challenging as model owners often opt to provide their models as a black box to safeguard model ownership. This paper proposes a \textbf{C}ollabo\textbf{ra}tive \textbf{F}ine-\textbf{T}uning (\textbf{CraFT}) approach for fine-tuning black-box VLMs to downstream tasks, where one only has access to the input prompts and the output predictions of the model. CraFT comprises two modules, a prompt generation module for learning text prompts and a prediction refinement module for enhancing output predictions in residual style. Additionally, we introduce an auxiliary prediction-consistent loss to promote consistent optimization across these modules. These modules are optimized by a novel collaborative training algorithm. Extensive experiments on few-shot classification over 15 datasets demonstrate the superiority of CraFT. The results show that CraFT achieves a decent gain of about 12\% with 16-shot datasets and only 8,000 queries. Moreover, CraFT trains faster and uses only about 1/80 of the memory footprint for deployment, while sacrificing only 1.62\% compared to the white-box method.},
+  code={https://github.com/mrflogs/CraFT},
+  pdf={2024_ArXiv_CraFT.pdf},
+  html={https://arxiv.org/abs/2402.04050},
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024}
+}
+
 @article{sheng2023self,
   abbr={ICCVW},
   selected={true},
@@ -61,27 +88,14 @@ Despite achieving promising results, most existing methods require labeled data 
   year={2023}
 }
 
-@article{liang2023towards,
-  abbr={ICML},
+@article{wang2024lora,
+  abbr={Preprint},
   selected={true},
   bibtext_show={false},
-  title={Realistic Unsupervised CLIP Fine-tuning with Universal Entropy Optimization},
-  author={Liang, Jian and Sheng, Lijun and Wang, Zhengbo and He, Ran and Tan, Tieniu},
-  abstract={The emergence of vision-language models (VLMs), such as CLIP, has spurred a significant research effort towards their application for downstream supervised learning tasks. Although some previous studies have explored the unsupervised fine-tuning of CLIP, they often rely on prior knowledge in the form of class names associated with ground truth labels. In this paper, we delve into a realistic unsupervised fine-tuning scenario by assuming that the unlabeled data might contain out-of-distribution samples from unknown classes. Furthermore, we emphasize the importance of simultaneously enhancing out-of-distribution detection capabilities alongside the recognition of instances associated with predefined class labels.
-To tackle this problem, we present a simple, efficient, and effective fine-tuning approach called Universal Entropy Optimization (UEO). UEO leverages sample-level confidence to approximately minimize the conditional entropy of confident instances and maximize the marginal entropy of less confident instances. Apart from optimizing the textual prompts, UEO also incorporates optimization of channel-wise affine transformations within the visual branch of CLIP. Through extensive experiments conducted across 15 domains and 4 different types of prior knowledge, we demonstrate that UEO surpasses baseline methods in terms of both generalization and out-of-distribution detection.},
-  html={https://arxiv.org/abs/2308.12919},
+  title={LoRA-Pro: Are Low-Rank Adapters Properly Optimized?},
+  author={Wang, Zhengbo and Liang, Jian},
+  journal={arXiv preprint arXiv:2407.18242},
   year={2024}
 }
 
-@article{wang2024connecting,
-  abbr={ICML},
-  selected={true},
-  bibtext_show={true},
-  title={Connecting the Dots: Collaborative Fine-tuning for Black-Box Vision-Language Models},
-  author={Wang, Zhengbo and Liang, Jian and He, Ran and Wang, Zilei and Tan, Tieniu},
-  abstract={With the emergence of pretrained vision-language models (VLMs), considerable efforts have been devoted to fine-tuning them for downstream tasks. Despite the progress made in designing efficient fine-tuning methods, such methods require access to the model's parameters, which can be challenging as model owners often opt to provide their models as a black box to safeguard model ownership. This paper proposes a \textbf{C}ollabo\textbf{ra}tive \textbf{F}ine-\textbf{T}uning (\textbf{CraFT}) approach for fine-tuning black-box VLMs to downstream tasks, where one only has access to the input prompts and the output predictions of the model. CraFT comprises two modules, a prompt generation module for learning text prompts and a prediction refinement module for enhancing output predictions in residual style. Additionally, we introduce an auxiliary prediction-consistent loss to promote consistent optimization across these modules. These modules are optimized by a novel collaborative training algorithm. Extensive experiments on few-shot classification over 15 datasets demonstrate the superiority of CraFT. The results show that CraFT achieves a decent gain of about 12\% with 16-shot datasets and only 8,000 queries. Moreover, CraFT trains faster and uses only about 1/80 of the memory footprint for deployment, while sacrificing only 1.62\% compared to the white-box method.},
-  pdf={2024_ArXiv_CraFT.pdf},
-  html={https://arxiv.org/abs/2402.04050},
-  journal={arXiv preprint arXiv:2402.04050},
-  year={2024}
-}
+
